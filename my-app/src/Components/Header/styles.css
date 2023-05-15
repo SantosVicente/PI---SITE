@@ -1,0 +1,66 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 10vw;
+  color: aliceblue;
+}
+
+header .logo {
+  font-weight: 700;
+  font-size: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header li {
+  list-style: none;
+}
+
+header ul {
+  display: flex;
+  gap: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/*Underline*/
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: aliceblue;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: aliceblue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 1440px) {
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .hover-underline-animation::after{
+    height: 1px;
+  }
+}
